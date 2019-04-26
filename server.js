@@ -1,7 +1,7 @@
 // Import all of the server requirements
 const express = require('express'),
   path = require('path'),
-  mongoose = require('mongoose'),
+  //mongoose = require('mongoose'),
   PORT = process.env.PORT || 3001,
   app = express();
 
@@ -16,12 +16,12 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Database setup:
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/textrpg';
-mongoose.connect(mongoURI, { useNewUrlParser: true });
+//const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/textrpg';
+//mongoose.connect(mongoURI, { useNewUrlParser: true });
 
 // Define API routes:
-const apiRouter = require('./routes/apiRoutes');
-app.use('/api', apiRouter);
+//const apiRouter = require('./routes/apiRoutes');
+//app.use('/api', apiRouter);
 
 // Send every other request to the React app:
 app.get('*', (req, res) => {
